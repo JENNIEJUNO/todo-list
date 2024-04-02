@@ -1,0 +1,92 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-image:url(letter_paper.jpg);
+    background-size:cover;
+}
+#container{
+    position:relative;
+    margin:auto;
+    width:800px; height:100vh;
+    background:white;
+    padding:1em;
+    border-top:10px solid blanchedalmond;
+    border-bottom:10px solid blanchedalmond;
+}
+#input_button input{
+    margin:1em 0;
+    width:80%;
+    border:1px solid blanchedalmond;
+    outline:none;
+}
+#input_button button{
+    padding:0 0.2em;
+    border:1px solid blanchedalmond;
+    background:blanchedalmond;;
+}
+#task{
+    border:1px solid lightgray;
+}
+#list_box{
+    position:relative;
+    display:flex;
+    border-bottom:1px solid lightgray;
+}
+#list_box #under_line{
+    position:absolute;
+    top:53px;
+    transition:1s;
+    left:0px;
+    width:60px; height:3px;
+    background:pink;
+}
+#list_box div:nth-child(n+2){
+    padding:1em;
+    cursor:pointer;
+}
+.text_box_button{
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid lightgray;
+}
+.text_box{
+    flex:8;
+    padding:1em;
+}
+.button_box{
+    flex:2;
+    display:flex;
+    background:blue;
+}
+.line-through{
+    text-decoration:line-through;
+}
+#check_button{
+    width:50%;
+    background-color:white;
+    border:0;
+    color:green;
+    transition:0.5s;
+}
+#check_button:hover{
+    background-color:rgb(42, 246, 42);
+}
+#delete_button{
+    width:50%;
+    background-color:white;
+    border:0;
+    color:red;
+    transition:0.5s;
+}
+#delete_button:hover{
+    background-color:rgb(247, 158, 158);
+}
+
+
+@media (max-width:800px){
+    #container{
+        width:100vw;
+    }
+}
