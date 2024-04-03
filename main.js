@@ -12,10 +12,15 @@ for(let i = 1; i < list_box_div.length; i++){
     })
 }
 
-//엔터 허용
-
-
-plus_button.addEventListener('click', add_task)
+//엔터, 플러스버튼 눌렀을때 input_area에 값이 있는지 확인 및 전송
+window.addEventListener('keypress', function(e){
+    if(e.key === 'Enter' && input_area.value){ add_task() }
+    else{ alert('할 일을 입력해 주세요!') }
+})
+plus_button.addEventListener('click', function(){
+    if(!input_area.value) alert('할 일을 입력해 주세요!')
+    else{add_task()}
+})
 
 function add_task(){
     let task = {
